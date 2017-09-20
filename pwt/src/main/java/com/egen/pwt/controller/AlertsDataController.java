@@ -56,7 +56,7 @@ public class AlertsDataController {
             return response;
 
         }
-        else if(Integer.parseInt(sensorData.getValue())>baseWeight+baseWeight*0.01){ alert="below weight";
+        else if(Integer.parseInt(sensorData.getValue())<baseWeight-baseWeight*0.01){ alert="below weight";
             AlertsData alertsData = new AlertsData();
             alertsData.setAlert(alert);
             datastore.save(alertsData);
