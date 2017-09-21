@@ -18,7 +18,7 @@ public class SensorDataRepositoryTest extends PwtsensorApplicationTests{
     public void testSave() {
 
 
-        SensorData value1 = new SensorData("1436465637","23");
+        SensorData value1 = new SensorData(1436465637L,"23");
 
         Key<SensorData> sensor232 = sensorDataRepository.save(value1);
         assertNotNull(value1);

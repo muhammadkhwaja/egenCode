@@ -13,7 +13,7 @@ public class SensorData {
     @Id
     private ObjectId id;
 
-    String timeStamp;
+   Long timeStamp;
 
     String value;
 
@@ -25,11 +25,11 @@ public class SensorData {
         this.id = id;
     }
 
-    public String getTimeStamp() {
+    public Long getTimeStamp() {
         return timeStamp;
     }
 
-    public void setTimeStamp(String timeStamp) {
+    public void setTimeStamp(Long timeStamp) {
         this.timeStamp = timeStamp;
     }
 
@@ -44,7 +44,7 @@ public class SensorData {
     public SensorData() {
     }
 
-    public SensorData(String timeStamp, String value) {
+    public SensorData(Long timeStamp, String value) {
         this.timeStamp = timeStamp;
         this.value = value;
     }

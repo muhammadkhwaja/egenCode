@@ -32,6 +32,10 @@ dependencies {
 	compile('org.projectlombok:lombok')
 	compile('org.mongodb.morphia:morphia:1.2.1')
 	compile("org.springframework.boot:spring-boot-starter-web")
+
+	compile group: 'org.easyrules', name: 'easyrules-core', version: '2.4.0'
+
+
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('de.flapdoodle.embed:de.flapdoodle.embed.mongo')
 }

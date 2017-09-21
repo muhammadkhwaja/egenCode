@@ -2,4 +2,4 @@ server.port: 9000
 spring:
     data:
         mongodb:
-            database: alertsdata
+            database: pwt

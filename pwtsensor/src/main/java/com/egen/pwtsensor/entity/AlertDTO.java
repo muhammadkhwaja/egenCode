@@ -1,27 +1,32 @@
-package com.egen.pwt.entity;
+package com.egen.pwtsensor.entity;
 
 
 import org.bson.types.ObjectId;
-import org.mongodb.morphia.annotations.Entity;
+
 import org.mongodb.morphia.annotations.Id;
 
 
 
-@Entity("sensordata")
-public class SensorData {
+
+public class AlertDTO {
+
     @Id
     private ObjectId id;
 
-    String timeStamp;
+    Long timeStamp;
 
     String value;
 
-    public SensorData() {
+    int baseWeight;
+
+    public AlertDTO() {
     }
 
-    public SensorData(String timeStamp, String value) {
+    public AlertDTO(ObjectId id, Long timeStamp, String value, int baseWeight) {
+        this.id = id;
         this.timeStamp = timeStamp;
         this.value = value;
+        this.baseWeight = baseWeight;
     }
 
     public ObjectId getId() {
@@ -32,11 +37,11 @@ public class SensorData {
         this.id = id;
     }
 
-    public String getTimeStamp() {
+    public Long getTimeStamp() {
         return timeStamp;
     }
 
-    public void setTimeStamp(String timeStamp) {
+    public void setTimeStamp(Long timeStamp) {
         this.timeStamp = timeStamp;
     }
 
@@ -47,4 +52,14 @@ public class SensorData {
     public void setValue(String value) {
         this.value = value;
     }
+
+
+    public int getBaseWeight() {
+        return baseWeight;
+    }
+
+    public void setBaseWeight(int baseWeight) {
+        this.baseWeight = baseWeight;
+    }
 }
+

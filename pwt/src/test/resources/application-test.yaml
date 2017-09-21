@@ -1,6 +1,6 @@
 spring:
   data:
     mongodb:
-      database: morphia
+      database: pwt
       port: 0
       uri: mongodb://morphia:morphia@localhost
